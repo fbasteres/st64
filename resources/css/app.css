@@ -1,3 +1,84 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+:root{
+    /* Colores gray */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --gray-950: #030712;
+}
+
+/* Seccion Desarrollo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.prg-dev{
+    background: no-repeat center center url("../../public/src/img/fotos/paisaje1.webp");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Fin Seccion Desarrollo */
+
+/* Generales */
+body{
+    font-family: 'Titillium Web';
+}
+/* Fin Generales */
+
+/* Header */
+.prg-header{
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica el desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+}
+.prg-header__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.prg-header .prg-header--content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.prg-header .prg-header--content .prg-header--content_half .header--logo{
+    height: 2.1rem;
+}
+.prg-header .prg-header--content .prg-header--content_menu .prg-header--nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+}
+.prg-header .prg-header--content .prg-header--content_menu .prg-header--nav .prg-header--item{
+    list-style: none;
+}
+.prg-header .prg-header--content .prg-header--content_menu .prg-header--nav .prg-header--item .prg-header--link{
+    text-decoration: none;
+    color: var(--bs-white);
+    font-size: 1rem;
+    font-weight: 400;
+    transition: opacity .5s ease;
+}
+.prg-header .prg-header--content .prg-header--content_menu .prg-header--nav:hover > :not(:hover){
+    color: var(--gray-300);
+    opacity: .5;
+}
+
+/* Fin Header */
