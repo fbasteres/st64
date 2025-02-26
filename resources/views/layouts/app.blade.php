@@ -8,14 +8,8 @@
         @include('layouts.style')
     </head>
     <body>
-        <div class="prg__content">
             @include('layouts.partials.navbar')
-            <main>
-                <div class="container">
-                    @yield('content')
-                </div>
-            </main>
+            @yield('content')
             @include('layouts.partials.footer')
-        </div>
     </body>
     </html>
